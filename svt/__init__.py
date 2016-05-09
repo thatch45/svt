@@ -122,8 +122,8 @@ class Terminal(object):
                  log_stderr_level='debug',
 
                  # sys.stdXYZ streaming options
-                 stream_stdout=None,
-                 stream_stderr=None,
+                 stream_stdout=True,
+                 stream_stderr=True,
                  ):
 
         # Let's avoid Zombies!!!
