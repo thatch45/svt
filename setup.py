@@ -8,6 +8,7 @@ import shutil
 
 if 'USE_SETUPTOOLS' in os.environ or 'setuptools' in sys.modules:
     from setuptools import setup
+    from setuptools import Command
 else:
     from distutils.core import setup
     from distutils.core import Command
