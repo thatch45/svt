@@ -48,11 +48,7 @@ LOG_LEVELS = {
     'debug': logging.DEBUG,
     'error': logging.ERROR,
     'critical': logging.CRITICAL,
-    'garbage': GARBAGE,
     'info': logging.INFO,
-    'profile': PROFILE,
-    'quiet': QUIET,
-    'trace': TRACE,
     'warning': logging.WARNING,
 }
 
@@ -90,14 +86,14 @@ def _cleanup():
 # <---- Cleanup Running Instances --------------------------------------------
 
 
-def to_str(s, encoding=None):
+def to_str(s, encoding='utf-8'):
     '''
     Given str, bytes, bytearray, or unicode (py2), return str
     '''
     if isinstance(s, str):
         return s
     elif isinstance(s, (bytes, bytearray)):
-        return s.decode(encoding or __salt_system_encoding__)
+        return s.decode(encoding)
     raise TypeError('expected str, bytes, or bytearray')
 
 
