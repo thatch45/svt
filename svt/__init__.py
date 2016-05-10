@@ -221,7 +221,6 @@ class Terminal(object):
             # exception type
             log.warning(
                 'Failed to spawn the VT: {0}'.format(err),
-                 exc_info_on_loglevel=logging.DEBUG
             )
             raise TerminalException(
                 'Failed to spawn the VT. Error: {0}'.format(err)
@@ -451,7 +450,6 @@ class Terminal(object):
                             'Failed to set the VT terminal size: {0}'.format(
                                 err
                             ),
-                            exc_info_on_loglevel=logging.DEBUG
                         )
 
                 # Do not allow child to inherit open file descriptors from
